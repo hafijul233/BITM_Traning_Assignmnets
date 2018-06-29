@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace _04SCIITeller
 {
-    public partial class Form1 : Form
+    public partial class ASCIITeller : Form
     {
-        public Form1()
+        public ASCIITeller()
         {
             InitializeComponent();
         }
