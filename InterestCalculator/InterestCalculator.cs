@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace InterestCalculator
 {
-    public partial class Form1 : Form
+    public partial class InterestCalculator : Form
     {
-        public Form1()
+        public InterestCalculator()
         {
             InitializeComponent();
         }
