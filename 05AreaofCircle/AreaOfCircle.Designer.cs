@@ -29,32 +29,34 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AreaOfCircle));
-            this.checkButton = new System.Windows.Forms.Button();
-            this.charactertextBox = new System.Windows.Forms.TextBox();
+            this.calculateButton = new System.Windows.Forms.Button();
+            this.inputRadiusTextBox = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
-            // checkButton
+            // calculateButton
             // 
-            this.checkButton.BackColor = System.Drawing.SystemColors.Highlight;
-            this.checkButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkButton.Location = new System.Drawing.Point(147, 275);
-            this.checkButton.Name = "checkButton";
-            this.checkButton.Size = new System.Drawing.Size(235, 63);
-            this.checkButton.TabIndex = 9;
-            this.checkButton.Text = "Check";
-            this.checkButton.UseVisualStyleBackColor = false;
+            this.calculateButton.BackColor = System.Drawing.SystemColors.Highlight;
+            this.calculateButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.calculateButton.Location = new System.Drawing.Point(147, 275);
+            this.calculateButton.Name = "calculateButton";
+            this.calculateButton.Size = new System.Drawing.Size(235, 63);
+            this.calculateButton.TabIndex = 9;
+            this.calculateButton.Text = "Calculate";
+            this.calculateButton.UseVisualStyleBackColor = false;
+            this.calculateButton.Click += new System.EventHandler(this.calculateButton_Click);
             // 
-            // charactertextBox
+            // inputRadiusTextBox
             // 
-            this.charactertextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.charactertextBox.Location = new System.Drawing.Point(71, 202);
-            this.charactertextBox.Name = "charactertextBox";
-            this.charactertextBox.Size = new System.Drawing.Size(392, 39);
-            this.charactertextBox.TabIndex = 8;
+            this.inputRadiusTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.inputRadiusTextBox.Location = new System.Drawing.Point(71, 202);
+            this.inputRadiusTextBox.Name = "inputRadiusTextBox";
+            this.inputRadiusTextBox.Size = new System.Drawing.Size(392, 39);
+            this.inputRadiusTextBox.TabIndex = 8;
+            this.inputRadiusTextBox.TextChanged += new System.EventHandler(this.inputRadiusTextBox_TextChanged);
             // 
             // label2
             // 
@@ -62,9 +64,9 @@
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(142, 144);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(240, 25);
+            this.label2.Size = new System.Drawing.Size(221, 25);
             this.label2.TabIndex = 7;
-            this.label2.Text = "Enter a single character";
+            this.label2.Text = "Enter Radius of Circle";
             // 
             // label1
             // 
@@ -90,14 +92,16 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(538, 450);
-            this.Controls.Add(this.checkButton);
-            this.Controls.Add(this.charactertextBox);
+            this.ClientSize = new System.Drawing.Size(538, 372);
+            this.Controls.Add(this.calculateButton);
+            this.Controls.Add(this.inputRadiusTextBox);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "AreaOfCircle";
-            this.Text = "Form1";
+            this.Text = "Circle Wizard";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.AreaOfCircle_FormClosing);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -106,8 +110,8 @@
 
         #endregion
 
-        private System.Windows.Forms.Button checkButton;
-        private System.Windows.Forms.TextBox charactertextBox;
+        private System.Windows.Forms.Button calculateButton;
+        private System.Windows.Forms.TextBox inputRadiusTextBox;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox1;
