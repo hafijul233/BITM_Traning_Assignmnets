@@ -26,7 +26,7 @@ namespace _06EmployeeSalaryCalculator
             {
                 if (Char.IsDigit(c) == false && c != '.')
                 {
-                    MessageBox.Show("Only Numbers are Allowed.", programTitle);
+                    MessageBox.Show("Only Numbers and (.) are Allowed.", programTitle);
                     return;
                 }
             }

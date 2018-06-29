@@ -40,6 +40,7 @@
             this.label5 = new System.Windows.Forms.Label();
             this.intersetValuelabel = new System.Windows.Forms.Label();
             this.bankNamecomboBox = new System.Windows.Forms.ComboBox();
+            this.clearButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -47,12 +48,13 @@
             // 
             this.calculateButton.BackColor = System.Drawing.SystemColors.Highlight;
             this.calculateButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.calculateButton.Location = new System.Drawing.Point(211, 375);
+            this.calculateButton.Location = new System.Drawing.Point(90, 385);
             this.calculateButton.Name = "calculateButton";
             this.calculateButton.Size = new System.Drawing.Size(235, 63);
             this.calculateButton.TabIndex = 19;
             this.calculateButton.Text = "Calculate";
             this.calculateButton.UseVisualStyleBackColor = false;
+            this.calculateButton.Click += new System.EventHandler(this.calculateButton_Click);
             // 
             // label1
             // 
@@ -101,6 +103,7 @@
             this.timeTextBox.Name = "timeTextBox";
             this.timeTextBox.Size = new System.Drawing.Size(380, 39);
             this.timeTextBox.TabIndex = 21;
+            this.timeTextBox.TextChanged += new System.EventHandler(this.timeTextBox_TextChanged);
             // 
             // label4
             // 
@@ -119,6 +122,7 @@
             this.balanceTextBox.Name = "balanceTextBox";
             this.balanceTextBox.Size = new System.Drawing.Size(437, 39);
             this.balanceTextBox.TabIndex = 23;
+            this.balanceTextBox.TextChanged += new System.EventHandler(this.balanceTextBox_TextChanged);
             // 
             // label5
             // 
@@ -134,7 +138,7 @@
             // 
             this.intersetValuelabel.AutoSize = true;
             this.intersetValuelabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.intersetValuelabel.Location = new System.Drawing.Point(416, 502);
+            this.intersetValuelabel.Location = new System.Drawing.Point(245, 502);
             this.intersetValuelabel.Name = "intersetValuelabel";
             this.intersetValuelabel.Size = new System.Drawing.Size(65, 37);
             this.intersetValuelabel.TabIndex = 26;
@@ -154,12 +158,26 @@
             this.bankNamecomboBox.Name = "bankNamecomboBox";
             this.bankNamecomboBox.Size = new System.Drawing.Size(437, 40);
             this.bankNamecomboBox.TabIndex = 27;
+            this.bankNamecomboBox.SelectedIndexChanged += new System.EventHandler(this.bankNamecomboBox_SelectedIndexChanged);
+            // 
+            // clearButton
+            // 
+            this.clearButton.BackColor = System.Drawing.Color.LightCoral;
+            this.clearButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.clearButton.Location = new System.Drawing.Point(423, 385);
+            this.clearButton.Name = "clearButton";
+            this.clearButton.Size = new System.Drawing.Size(192, 63);
+            this.clearButton.TabIndex = 28;
+            this.clearButton.Text = "Clear";
+            this.clearButton.UseVisualStyleBackColor = false;
+            this.clearButton.Click += new System.EventHandler(this.clearButton_Click);
             // 
             // InterestCalculator
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(662, 611);
+            this.Controls.Add(this.clearButton);
             this.Controls.Add(this.bankNamecomboBox);
             this.Controls.Add(this.intersetValuelabel);
             this.Controls.Add(this.label5);
@@ -193,6 +211,7 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label intersetValuelabel;
         private System.Windows.Forms.ComboBox bankNamecomboBox;
+        private System.Windows.Forms.Button clearButton;
     }
 }
 
