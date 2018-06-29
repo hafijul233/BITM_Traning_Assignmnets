@@ -1,6 +1,6 @@
 ﻿namespace BITM_Traning_Assignmnet1
 {
-    partial class Form1
+    partial class PrimeFinder
     {
         /// <summary>
         /// Required designer variable.

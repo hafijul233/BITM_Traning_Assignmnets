@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27703.2035
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BITM_Traning_Assignmnet1", "BITM_Traning_Assignmnet1\BITM_Traning_Assignmnet1.csproj", "{7E4DB7CF-1FE4-430F-9B29-4F109F735360}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01PrimeFinder", "BITM_Traning_Assignmnet1\01PrimeFinder.csproj", "{7E4DB7CF-1FE4-430F-9B29-4F109F735360}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace BITM_Traning_Assignmnet1
 {
-    public partial class Form1 : Form
+    public partial class PrimeFinder : Form
     {
-        public Form1()
+        public PrimeFinder()
         {
             InitializeComponent();
         }
