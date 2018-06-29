@@ -32,6 +32,8 @@ namespace BITM_Traning_Assignmnet1
                 if (Char.IsDigit(c) == false)
                 {
                     MessageBox.Show("Only Numbers are Allowed.",programTile);
+
+                    return;
                 }
             }
         }
