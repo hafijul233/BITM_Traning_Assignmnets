@@ -77,8 +77,10 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
-    <Folder Include="resources\" />
+    <Content Include="resources\869219_envelope_512x512.ico" />
+    <Content Include="resources\prof_greeting_icon.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

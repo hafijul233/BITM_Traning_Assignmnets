@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{7E4DB7CF-1FE4-430F-9B29-4F109F735360}</ProjectGuid>
+    <ProjectGuid>{E446C950-6DDB-46BF-952D-BC6F4F4C20EE}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>BITM_Traning_Assignmnet1</RootNamespace>
-    <AssemblyName>BITM_Traning_Assignmnet1</AssemblyName>
+    <RootNamespace>_05AreaofCircle</RootNamespace>
+    <AssemblyName>05AreaofCircle</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -44,16 +44,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="PrimeFinder.cs">
+    <Compile Include="AreaOfCircle.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="PrimeFinder.Designer.cs">
-      <DependentUpon>PrimeFinder.cs</DependentUpon>
+    <Compile Include="AreaOfCircle.Designer.cs">
+      <DependentUpon>AreaOfCircle.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="PrimeFinder.resx">
-      <DependentUpon>PrimeFinder.cs</DependentUpon>
+    <EmbeddedResource Include="AreaOfCircle.resx">
+      <DependentUpon>AreaOfCircle.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -77,10 +77,9 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
   <ItemGroup>
-    <Content Include="resources\com.Brogrammer.primefinder.ico" />
-    <Content Include="resources\com.Brogrammer.primefinder.png" />
+    <Content Include="resources\302200c3c76efa6820dd45fb4a15f9a2_jpg_bjH_icon.ico" />
+    <Content Include="resources\Crimson_Circle_logo_2.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
