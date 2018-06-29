@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{65EB91CF-86C4-4984-A4A9-D924F4A92076}</ProjectGuid>
+    <ProjectGuid>{A41CF8EA-C9D7-4291-AC77-F0248FDAC095}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>_06EmployeeSalaryCalculator</RootNamespace>
-    <AssemblyName>06EmployeeSalaryCalculator</AssemblyName>
+    <RootNamespace>InterestCalculator</RootNamespace>
+    <AssemblyName>InterestCalculator</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -44,14 +44,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="SalaryCalculator.cs">
+    <Compile Include="InterestCalculator.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="SalaryCalculator.Designer.cs">
-      <DependentUpon>SalaryCalculator.cs</DependentUpon>
+    <Compile Include="InterestCalculator.Designer.cs">
+      <DependentUpon>InterestCalculator.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="InterestCalculator.resx">
+      <DependentUpon>InterestCalculator.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -61,9 +64,6 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="SalaryCalculator.resx">
-      <DependentUpon>SalaryCalculator.cs</DependentUpon>
-    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -77,9 +77,10 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
-    <Content Include="resources\icon-lg-salary.png" />
-    <Content Include="resources\icon_exY_icon.ico" />
+    <Content Include="resources\percent_PNG32.png" />
+    <Content Include="resources\percent_png71_y0U_icon.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

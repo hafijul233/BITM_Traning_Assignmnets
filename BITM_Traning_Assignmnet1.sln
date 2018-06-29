@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "05AreaofCircle", "05AreaofC
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "06EmployeeSalaryCalculator", "06EmployeeSalaryCalculator\06EmployeeSalaryCalculator.csproj", "{65EB91CF-86C4-4984-A4A9-D924F4A92076}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "07InterestCalculator", "InterestCalculator\07InterestCalculator.csproj", "{A41CF8EA-C9D7-4291-AC77-F0248FDAC095}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{65EB91CF-86C4-4984-A4A9-D924F4A92076}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{65EB91CF-86C4-4984-A4A9-D924F4A92076}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{65EB91CF-86C4-4984-A4A9-D924F4A92076}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A41CF8EA-C9D7-4291-AC77-F0248FDAC095}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A41CF8EA-C9D7-4291-AC77-F0248FDAC095}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A41CF8EA-C9D7-4291-AC77-F0248FDAC095}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A41CF8EA-C9D7-4291-AC77-F0248FDAC095}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
