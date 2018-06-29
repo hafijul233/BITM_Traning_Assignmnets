@@ -34,14 +34,21 @@ namespace _02MessageGreeter
             }
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void ClickMeButton_Click(object sender, EventArgs e)
         {
+            string insertedName = fullNameTextBox.Text;
 
+            string greetMessage = "Hi " + insertedName + ", have a nice day.";
+
+            MessageBox.Show(greetMessage, programTitle, 
+                            MessageBoxButtons.OK, 
+                            MessageBoxIcon.Exclamation);
         }
-        
+
         private void MessageGreeter_FormClosing(object sender, FormClosingEventArgs e)
         {
-            var dialogResult = MessageBox.Show("Are you sure to Quit!", programTitle, MessageBoxButtons.YesNo);
+            var dialogResult = MessageBox.Show("Are you sure to Quit!", programTitle,
+                                                MessageBoxButtons.YesNo);
 
             if (dialogResult == DialogResult.Yes)
             {

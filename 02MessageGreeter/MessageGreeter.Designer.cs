@@ -33,7 +33,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.fullNameTextBox = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.ClickMeButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -76,17 +76,17 @@
             this.fullNameTextBox.TabIndex = 3;
             this.fullNameTextBox.TextChanged += new System.EventHandler(this.fullNameTextBox_TextChanged);
             // 
-            // button1
+            // ClickMeButton
             // 
-            this.button1.BackColor = System.Drawing.Color.Salmon;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(114, 230);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(362, 64);
-            this.button1.TabIndex = 4;
-            this.button1.Text = "Click Me!";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.ClickMeButton.BackColor = System.Drawing.Color.Salmon;
+            this.ClickMeButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ClickMeButton.Location = new System.Drawing.Point(114, 230);
+            this.ClickMeButton.Name = "ClickMeButton";
+            this.ClickMeButton.Size = new System.Drawing.Size(362, 64);
+            this.ClickMeButton.TabIndex = 4;
+            this.ClickMeButton.Text = "Click Me!";
+            this.ClickMeButton.UseVisualStyleBackColor = false;
+            this.ClickMeButton.Click += new System.EventHandler(this.ClickMeButton_Click);
             // 
             // MessageGreeter
             // 
@@ -94,7 +94,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.ClientSize = new System.Drawing.Size(620, 328);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.ClickMeButton);
             this.Controls.Add(this.fullNameTextBox);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -115,7 +115,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox fullNameTextBox;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button ClickMeButton;
     }
 }
 
