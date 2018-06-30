@@ -90,5 +90,21 @@ namespace InterestCalculator
             balanceTextBox.Text = "";
             intersetValuelabel.Text = "0.0";
         }
+
+        private void InterestCalculator_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            var dialogResult = MessageBox.Show("Are you sure to Quit!", _programTitle,
+                MessageBoxButtons.YesNo);
+
+            if (dialogResult == DialogResult.Yes)
+            {
+                Application.Exit();
+            }
+
+            else
+            {
+                e.Cancel = true;
+            }
+        }
     }
 }

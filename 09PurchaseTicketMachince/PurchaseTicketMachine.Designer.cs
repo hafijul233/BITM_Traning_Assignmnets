@@ -219,6 +219,7 @@
             this.nameButton.TabIndex = 44;
             this.nameButton.Text = "Name";
             this.nameButton.UseVisualStyleBackColor = true;
+            this.nameButton.Click += new System.EventHandler(this.nameButton_Click);
             // 
             // parentNameButton
             // 
@@ -229,6 +230,7 @@
             this.parentNameButton.TabIndex = 45;
             this.parentNameButton.Text = "Parent\'s Name";
             this.parentNameButton.UseVisualStyleBackColor = true;
+            this.parentNameButton.Click += new System.EventHandler(this.parentNameButton_Click);
             // 
             // addressButton
             // 
@@ -239,6 +241,7 @@
             this.addressButton.TabIndex = 46;
             this.addressButton.Text = "Address";
             this.addressButton.UseVisualStyleBackColor = true;
+            this.addressButton.Click += new System.EventHandler(this.addressButton_Click);
             // 
             // PurchaseTicketMachine
             // 
@@ -257,6 +260,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "PurchaseTicketMachine";
             this.Text = "Ticket Counter Machince";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.PurchaseTicketMachine_FormClosing);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();

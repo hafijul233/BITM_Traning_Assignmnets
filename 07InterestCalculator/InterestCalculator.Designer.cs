@@ -192,6 +192,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "InterestCalculator";
             this.Text = "Interest Calculator";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.InterestCalculator_FormClosing);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

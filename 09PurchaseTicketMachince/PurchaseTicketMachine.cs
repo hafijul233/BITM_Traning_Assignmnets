@@ -24,6 +24,7 @@ namespace _09PurchaseTicketMachince
         private string _fatherName = String.Empty;
         private string _motherName = String.Empty;
         private string _address = String.Empty;
+        private string _information = String.Empty;
 
         private void stringValidator(string value)
         {
@@ -84,13 +85,83 @@ namespace _09PurchaseTicketMachince
 
         private void showButton_Click(object sender, EventArgs e)
         {
-            string inforamtion = "Name: " + _firstName + " " + _lastName + "\n" +
+            if (_firstName == String.Empty || _lastName == String.Empty ||
+                _fatherName == String.Empty || _motherName == String.Empty ||
+                _address == String.Empty)
+            {
+                MessageBox.Show("All fields Must Be Fill-up.", _programTitle);
+                return;
+            }
+
+            _information = "Name: " + _firstName + " " + _lastName + "\n" +
                                  "Father's Name: " + _fatherName + "\n" +
                                  "Mother's Name: " + _motherName + "\n" +
                                  "Address: " + _address + "\n";
-            MessageBox.Show(inforamtion, _programTitle,
+
+            MessageBox.Show(_information, _programTitle,
                 MessageBoxButtons.OKCancel,
                 MessageBoxIcon.Information);
+        }
+
+        private void nameButton_Click(object sender, EventArgs e)
+        {
+            if (_firstName == String.Empty || _lastName == String.Empty)
+            {
+                MessageBox.Show("All fields Must Be Fill-up.", _programTitle);
+                return;
+            }
+            _information = "Name: " + _firstName + " " + _lastName;
+
+            MessageBox.Show(_information, _programTitle,
+                MessageBoxButtons.OKCancel,
+                MessageBoxIcon.Information);
+        }
+
+        private void parentNameButton_Click(object sender, EventArgs e)
+        {
+            if (_fatherName == String.Empty || _motherName == String.Empty)
+            {
+                MessageBox.Show("All fields Must Be Fill-up.", _programTitle);
+                return;
+            }
+
+            _information = "Father's Name: " + _fatherName + "\n" +
+                           "Mother's Name: " + _motherName + "\n";
+
+            MessageBox.Show(_information, _programTitle,
+                MessageBoxButtons.OKCancel,
+                MessageBoxIcon.Information);
+
+        }
+
+        private void addressButton_Click(object sender, EventArgs e)
+        {
+            if (_address == String.Empty)
+            {
+                MessageBox.Show("All fields Must Be Fill-up.", _programTitle);
+                return;
+            }
+            _information = "Address: " + _address + "\n";
+
+            MessageBox.Show(_information, _programTitle,
+                MessageBoxButtons.OKCancel,
+                MessageBoxIcon.Information);
+        }
+
+        private void PurchaseTicketMachine_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            var dialogResult = MessageBox.Show("Are you sure to Quit!", _programTitle,
+                MessageBoxButtons.YesNo);
+
+            if (dialogResult == DialogResult.Yes)
+            {
+                Application.Exit();
+            }
+
+            else
+            {
+                e.Cancel = true;
+            }
         }
     }
 }
