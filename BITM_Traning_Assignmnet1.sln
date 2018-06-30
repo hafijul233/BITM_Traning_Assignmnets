@@ -17,6 +17,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "04ASCIITeller", "04ASCIITel
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "09PurchaseTicketMachince", "09PurchaseTicketMachince\09PurchaseTicketMachince.csproj", "{B7D79811-9847-4576-A026-43E8BF219ABB}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "10StandardCalculator", "10StandardCalculator\10StandardCalculator.csproj", "{178FE580-C952-4DAF-B142-25430A47E735}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -51,6 +53,10 @@ Global
 		{B7D79811-9847-4576-A026-43E8BF219ABB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B7D79811-9847-4576-A026-43E8BF219ABB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B7D79811-9847-4576-A026-43E8BF219ABB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{178FE580-C952-4DAF-B142-25430A47E735}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{178FE580-C952-4DAF-B142-25430A47E735}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{178FE580-C952-4DAF-B142-25430A47E735}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{178FE580-C952-4DAF-B142-25430A47E735}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
