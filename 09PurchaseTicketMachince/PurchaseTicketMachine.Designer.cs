@@ -32,21 +32,21 @@
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.addressTextBox = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.motherNameTextBox = new System.Windows.Forms.TextBox();
+            this.fatherNameTextBox = new System.Windows.Forms.TextBox();
+            this.lastNameTextBox = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.timeTextBox = new System.Windows.Forms.TextBox();
+            this.firstNameTextBox = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
+            this.saveButton = new System.Windows.Forms.Button();
+            this.showButton = new System.Windows.Forms.Button();
+            this.nameButton = new System.Windows.Forms.Button();
+            this.parentNameButton = new System.Windows.Forms.Button();
+            this.addressButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -73,15 +73,15 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.textBox4);
+            this.groupBox1.Controls.Add(this.addressTextBox);
             this.groupBox1.Controls.Add(this.label5);
-            this.groupBox1.Controls.Add(this.textBox2);
-            this.groupBox1.Controls.Add(this.textBox3);
-            this.groupBox1.Controls.Add(this.textBox1);
+            this.groupBox1.Controls.Add(this.motherNameTextBox);
+            this.groupBox1.Controls.Add(this.fatherNameTextBox);
+            this.groupBox1.Controls.Add(this.lastNameTextBox);
             this.groupBox1.Controls.Add(this.label7);
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Controls.Add(this.timeTextBox);
+            this.groupBox1.Controls.Add(this.firstNameTextBox);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(12, 131);
@@ -91,14 +91,14 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Ticket Reversion Form";
             // 
-            // textBox4
+            // addressTextBox
             // 
-            this.textBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox4.Location = new System.Drawing.Point(226, 310);
-            this.textBox4.Multiline = true;
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(503, 129);
-            this.textBox4.TabIndex = 57;
+            this.addressTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.addressTextBox.Location = new System.Drawing.Point(226, 310);
+            this.addressTextBox.Multiline = true;
+            this.addressTextBox.Name = "addressTextBox";
+            this.addressTextBox.Size = new System.Drawing.Size(503, 129);
+            this.addressTextBox.TabIndex = 57;
             // 
             // label5
             // 
@@ -106,33 +106,36 @@
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.Location = new System.Drawing.Point(47, 319);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(164, 25);
+            this.label5.Size = new System.Drawing.Size(99, 25);
             this.label5.TabIndex = 56;
-            this.label5.Text = "Mother\'s Name:";
+            this.label5.Text = "Address:";
             // 
-            // textBox2
+            // motherNameTextBox
             // 
-            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(226, 241);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(503, 39);
-            this.textBox2.TabIndex = 55;
+            this.motherNameTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.motherNameTextBox.Location = new System.Drawing.Point(226, 241);
+            this.motherNameTextBox.Name = "motherNameTextBox";
+            this.motherNameTextBox.Size = new System.Drawing.Size(503, 39);
+            this.motherNameTextBox.TabIndex = 55;
+            this.motherNameTextBox.TextChanged += new System.EventHandler(this.motherNameTextBox_TextChanged);
             // 
-            // textBox3
+            // fatherNameTextBox
             // 
-            this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.Location = new System.Drawing.Point(226, 169);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(503, 39);
-            this.textBox3.TabIndex = 54;
+            this.fatherNameTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.fatherNameTextBox.Location = new System.Drawing.Point(226, 169);
+            this.fatherNameTextBox.Name = "fatherNameTextBox";
+            this.fatherNameTextBox.Size = new System.Drawing.Size(503, 39);
+            this.fatherNameTextBox.TabIndex = 54;
+            this.fatherNameTextBox.TextChanged += new System.EventHandler(this.fatherNameTextBox_TextChanged);
             // 
-            // textBox1
+            // lastNameTextBox
             // 
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(226, 104);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(503, 39);
-            this.textBox1.TabIndex = 53;
+            this.lastNameTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lastNameTextBox.Location = new System.Drawing.Point(226, 104);
+            this.lastNameTextBox.Name = "lastNameTextBox";
+            this.lastNameTextBox.Size = new System.Drawing.Size(503, 39);
+            this.lastNameTextBox.TabIndex = 53;
+            this.lastNameTextBox.TextChanged += new System.EventHandler(this.lastNameTextBox_TextChanged);
             // 
             // label7
             // 
@@ -164,13 +167,14 @@
             this.label3.TabIndex = 50;
             this.label3.Text = "Father\'s Name:";
             // 
-            // timeTextBox
+            // firstNameTextBox
             // 
-            this.timeTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.timeTextBox.Location = new System.Drawing.Point(226, 41);
-            this.timeTextBox.Name = "timeTextBox";
-            this.timeTextBox.Size = new System.Drawing.Size(503, 39);
-            this.timeTextBox.TabIndex = 49;
+            this.firstNameTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.firstNameTextBox.Location = new System.Drawing.Point(226, 41);
+            this.firstNameTextBox.Name = "firstNameTextBox";
+            this.firstNameTextBox.Size = new System.Drawing.Size(503, 39);
+            this.firstNameTextBox.TabIndex = 49;
+            this.firstNameTextBox.TextChanged += new System.EventHandler(this.firstNameTextBox_TextChanged);
             // 
             // label2
             // 
@@ -182,57 +186,59 @@
             this.label2.TabIndex = 48;
             this.label2.Text = "First Name: ";
             // 
-            // button1
+            // saveButton
             // 
-            this.button1.BackColor = System.Drawing.SystemColors.Highlight;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(64, 618);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(250, 57);
-            this.button1.TabIndex = 42;
-            this.button1.Text = "Save Info";
-            this.button1.UseVisualStyleBackColor = false;
+            this.saveButton.BackColor = System.Drawing.SystemColors.Highlight;
+            this.saveButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.saveButton.Location = new System.Drawing.Point(64, 618);
+            this.saveButton.Name = "saveButton";
+            this.saveButton.Size = new System.Drawing.Size(250, 57);
+            this.saveButton.TabIndex = 42;
+            this.saveButton.Text = "Save Info";
+            this.saveButton.UseVisualStyleBackColor = false;
+            this.saveButton.Click += new System.EventHandler(this.saveButton_Click);
             // 
-            // button2
+            // showButton
             // 
-            this.button2.BackColor = System.Drawing.SystemColors.Info;
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(422, 618);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(302, 57);
-            this.button2.TabIndex = 43;
-            this.button2.Text = "Show All Information";
-            this.button2.UseVisualStyleBackColor = false;
+            this.showButton.BackColor = System.Drawing.SystemColors.Info;
+            this.showButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.showButton.Location = new System.Drawing.Point(422, 618);
+            this.showButton.Name = "showButton";
+            this.showButton.Size = new System.Drawing.Size(302, 57);
+            this.showButton.TabIndex = 43;
+            this.showButton.Text = "Show All Information";
+            this.showButton.UseVisualStyleBackColor = false;
+            this.showButton.Click += new System.EventHandler(this.showButton_Click);
             // 
-            // button3
+            // nameButton
             // 
-            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Location = new System.Drawing.Point(64, 703);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(181, 60);
-            this.button3.TabIndex = 44;
-            this.button3.Text = "Name";
-            this.button3.UseVisualStyleBackColor = true;
+            this.nameButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nameButton.Location = new System.Drawing.Point(64, 703);
+            this.nameButton.Name = "nameButton";
+            this.nameButton.Size = new System.Drawing.Size(181, 60);
+            this.nameButton.TabIndex = 44;
+            this.nameButton.Text = "Name";
+            this.nameButton.UseVisualStyleBackColor = true;
             // 
-            // button4
+            // parentNameButton
             // 
-            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.Location = new System.Drawing.Point(299, 703);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(198, 60);
-            this.button4.TabIndex = 45;
-            this.button4.Text = "Parent\'s Name";
-            this.button4.UseVisualStyleBackColor = true;
+            this.parentNameButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.parentNameButton.Location = new System.Drawing.Point(299, 703);
+            this.parentNameButton.Name = "parentNameButton";
+            this.parentNameButton.Size = new System.Drawing.Size(198, 60);
+            this.parentNameButton.TabIndex = 45;
+            this.parentNameButton.Text = "Parent\'s Name";
+            this.parentNameButton.UseVisualStyleBackColor = true;
             // 
-            // button5
+            // addressButton
             // 
-            this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button5.Location = new System.Drawing.Point(543, 703);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(181, 60);
-            this.button5.TabIndex = 46;
-            this.button5.Text = "Address";
-            this.button5.UseVisualStyleBackColor = true;
+            this.addressButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.addressButton.Location = new System.Drawing.Point(543, 703);
+            this.addressButton.Name = "addressButton";
+            this.addressButton.Size = new System.Drawing.Size(181, 60);
+            this.addressButton.TabIndex = 46;
+            this.addressButton.Text = "Address";
+            this.addressButton.UseVisualStyleBackColor = true;
             // 
             // PurchaseTicketMachine
             // 
@@ -240,11 +246,11 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(800, 805);
-            this.Controls.Add(this.button5);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.addressButton);
+            this.Controls.Add(this.parentNameButton);
+            this.Controls.Add(this.nameButton);
+            this.Controls.Add(this.showButton);
+            this.Controls.Add(this.saveButton);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox1);
@@ -263,21 +269,21 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox addressTextBox;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox motherNameTextBox;
+        private System.Windows.Forms.TextBox fatherNameTextBox;
+        private System.Windows.Forms.TextBox lastNameTextBox;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox timeTextBox;
+        private System.Windows.Forms.TextBox firstNameTextBox;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button saveButton;
+        private System.Windows.Forms.Button showButton;
+        private System.Windows.Forms.Button nameButton;
+        private System.Windows.Forms.Button parentNameButton;
+        private System.Windows.Forms.Button addressButton;
     }
 }
 
