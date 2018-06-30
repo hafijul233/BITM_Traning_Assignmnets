@@ -17,9 +17,9 @@ namespace InterestCalculator
             InitializeComponent();
         }
 
-        private string programTitle = "Interest Calculator";
+        private string _programTitle = "Interest Calculator";
 
-        private double bankrate = 0.0;
+        private double _bankrate = 0.0;
 
         private void timeTextBox_TextChanged(object sender, EventArgs e)
         {
@@ -29,7 +29,7 @@ namespace InterestCalculator
             {
                 if (Char.IsDigit(c) == false)
                 {
-                    MessageBox.Show("Only Numbers are Allowed.", programTitle);
+                    MessageBox.Show("Only Numbers are Allowed.", _programTitle);
                     return;
                 }
             }
@@ -41,20 +41,27 @@ namespace InterestCalculator
 
             foreach (char c in temp)
             {
-                if (Char.IsDigit(c) == false && c != '.')
+                if ((Char.IsDigit(c) == false) && c != '.')
                 {
-                    MessageBox.Show("Only Numbers & (.) are Allowed.", programTitle);
-                    return;
+                    MessageBox.Show("Only Numbers & (.) are Allowed.", _programTitle);
                 }
             }
+
         }
 
         private void calculateButton_Click(object sender, EventArgs e)
         {
+            if (balanceTextBox.Text == String.Empty || timeTextBox.Text == String.Empty)
+            {
+                MessageBox.Show("Input Stream is Empty.", _programTitle);
+
+                return;
+            }
+
             double balance = Convert.ToDouble(balanceTextBox.Text);
             int time = Convert.ToInt32(timeTextBox.Text);
 
-            double interest = (balance * bankrate * time)/100;
+            double interest = (balance * _bankrate * time)/100;
 
             intersetValuelabel.Text = Math.Round(interest, 2).ToString() + " Taka";
 
@@ -65,16 +72,16 @@ namespace InterestCalculator
             string bankName = bankNamecomboBox.Text;
 
             if (bankName == "BRAC: 6%")
-                bankrate = 6 ;
+                _bankrate = 6 ;
 
             else if (bankName == "DBBL: 7%")
-                bankrate = 7 ;
+                _bankrate = 7 ;
 
             else if (bankName == "HSBC: 8%")
-                bankrate = 8 ;
+                _bankrate = 8 ;
 
             else
-                bankrate = 1 ;
+                _bankrate = 1 ;
         }
 
         private void clearButton_Click(object sender, EventArgs e)

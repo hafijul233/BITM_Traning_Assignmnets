@@ -15,6 +15,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01PrimeFinder", "01PrimeFin
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "04ASCIITeller", "04ASCIITeller\04ASCIITeller.csproj", "{77D51CDE-8882-4942-9029-A01F5FA5B485}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "09PurchaseTicketMachince", "09PurchaseTicketMachince\09PurchaseTicketMachince.csproj", "{B7D79811-9847-4576-A026-43E8BF219ABB}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -45,6 +47,10 @@ Global
 		{77D51CDE-8882-4942-9029-A01F5FA5B485}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{77D51CDE-8882-4942-9029-A01F5FA5B485}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{77D51CDE-8882-4942-9029-A01F5FA5B485}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B7D79811-9847-4576-A026-43E8BF219ABB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B7D79811-9847-4576-A026-43E8BF219ABB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B7D79811-9847-4576-A026-43E8BF219ABB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B7D79811-9847-4576-A026-43E8BF219ABB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

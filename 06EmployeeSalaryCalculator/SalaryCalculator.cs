@@ -17,7 +17,7 @@ namespace _06EmployeeSalaryCalculator
             InitializeComponent();
         }
 
-        private string programTitle = "Salary Calculator";
+        private string _programTitle = "Salary Calculator";
         private void salaryTextBox_TextChanged(object sender, EventArgs e)
         {
             string temp = salaryTextBox.Text;
@@ -26,7 +26,7 @@ namespace _06EmployeeSalaryCalculator
             {
                 if (Char.IsDigit(c) == false && c != '.')
                 {
-                    MessageBox.Show("Only Numbers and (.) are Allowed.", programTitle);
+                    MessageBox.Show("Only Numbers and (.) are Allowed.", _programTitle);
                     return;
                 }
             }
@@ -74,12 +74,12 @@ namespace _06EmployeeSalaryCalculator
                                "\nSalary Bonus : " + bonus.ToString();
             }
 
-            MessageBox.Show(replyMessage, programTitle);
+            MessageBox.Show(replyMessage, _programTitle);
         }
 
         private void SalaryCalculator_FormClosing(object sender, FormClosingEventArgs e)
         {
-            var dialogResult = MessageBox.Show("Are you sure to Quit!", programTitle,
+            var dialogResult = MessageBox.Show("Are you sure to Quit!", _programTitle,
                 MessageBoxButtons.YesNo);
 
             if (dialogResult == DialogResult.Yes)
