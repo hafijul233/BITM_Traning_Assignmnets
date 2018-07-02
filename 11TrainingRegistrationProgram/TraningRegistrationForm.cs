@@ -75,7 +75,7 @@ namespace TrainingRegistrationApp
         {
             string instituteChoice = InstituteNamecomboBox.Text;
 
-            if (instituteChoice == String.Empty)
+            if (instituteChoice == String.Empty && _lastCount == 0)
             {
                 MessageBox.Show("Institute Name Choice is Empty.", _programTitle, MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
@@ -186,15 +186,15 @@ namespace TrainingRegistrationApp
 
         private void receiptButton_Click(object sender, EventArgs e)
         {
-            if (CandidateNametextBox.Text == String.Empty || InstituteNamecomboBox.Text == String.Empty ||
-                AvaliableCourseComboBox.Text == String.Empty || DurationComboBox.Text == String.Empty)
+            if ((CandidateNametextBox.Text == String.Empty || InstituteNamecomboBox.Text == String.Empty ||
+                AvaliableCourseComboBox.Text == String.Empty || DurationComboBox.Text == String.Empty) && _lastCount == 0)
             {
                 MessageBox.Show("Input Field Is Empty.", _programTitle);
 
                 return;
             }
 
-            string receipt = "\t\tCourse Registration Information\n" +
+            string receipt = "\t    Course Registration Information\n" +
                              "--------------------------------------------------------------\n" +
                              "Candidate Name: \t" + _registrationinfo[_lastCount - 1, 0] + "\n" +
                              "Institute Name: \t" + _registrationinfo[_lastCount - 1, 1] + "\n" +
