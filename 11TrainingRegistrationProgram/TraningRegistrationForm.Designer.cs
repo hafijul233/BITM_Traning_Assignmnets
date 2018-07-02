@@ -35,20 +35,24 @@
             this.RegiatrationFormTabControl = new System.Windows.Forms.TabControl();
             this.ReportTabPage = new System.Windows.Forms.TabPage();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.CandidateNametextBox = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.InstituteNamecomboBox = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
+            this.AvaliableCourseComboBox = new System.Windows.Forms.ComboBox();
+            this.DurationComboBox = new System.Windows.Forms.ComboBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
+            this.CostLabel = new System.Windows.Forms.Label();
+            this.RegisterButton = new System.Windows.Forms.Button();
+            this.receiptButton = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.candidateDataGridView = new System.Windows.Forms.DataGridView();
             this.tableLayoutPanel1.SuspendLayout();
             this.RegistrationTabPage.SuspendLayout();
+            this.ShowInfotabPage.SuspendLayout();
             this.RegiatrationFormTabControl.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.candidateDataGridView)).BeginInit();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -83,17 +87,18 @@
             // RegistrationTabPage
             // 
             this.RegistrationTabPage.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.RegistrationTabPage.Controls.Add(this.button2);
-            this.RegistrationTabPage.Controls.Add(this.button1);
             this.RegistrationTabPage.Controls.Add(this.label7);
+            this.RegistrationTabPage.Controls.Add(this.receiptButton);
+            this.RegistrationTabPage.Controls.Add(this.RegisterButton);
+            this.RegistrationTabPage.Controls.Add(this.CostLabel);
             this.RegistrationTabPage.Controls.Add(this.label6);
-            this.RegistrationTabPage.Controls.Add(this.comboBox3);
+            this.RegistrationTabPage.Controls.Add(this.DurationComboBox);
             this.RegistrationTabPage.Controls.Add(this.label5);
-            this.RegistrationTabPage.Controls.Add(this.comboBox2);
+            this.RegistrationTabPage.Controls.Add(this.AvaliableCourseComboBox);
             this.RegistrationTabPage.Controls.Add(this.label4);
-            this.RegistrationTabPage.Controls.Add(this.comboBox1);
+            this.RegistrationTabPage.Controls.Add(this.InstituteNamecomboBox);
             this.RegistrationTabPage.Controls.Add(this.label3);
-            this.RegistrationTabPage.Controls.Add(this.textBox1);
+            this.RegistrationTabPage.Controls.Add(this.CandidateNametextBox);
             this.RegistrationTabPage.Controls.Add(this.label2);
             this.RegistrationTabPage.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.RegistrationTabPage.Location = new System.Drawing.Point(4, 34);
@@ -106,6 +111,7 @@
             // ShowInfotabPage
             // 
             this.ShowInfotabPage.BackColor = System.Drawing.SystemColors.Info;
+            this.ShowInfotabPage.Controls.Add(this.candidateDataGridView);
             this.ShowInfotabPage.Location = new System.Drawing.Point(4, 34);
             this.ShowInfotabPage.Name = "ShowInfotabPage";
             this.ShowInfotabPage.Padding = new System.Windows.Forms.Padding(3);
@@ -127,6 +133,7 @@
             this.RegiatrationFormTabControl.Size = new System.Drawing.Size(814, 578);
             this.RegiatrationFormTabControl.SizeMode = System.Windows.Forms.TabSizeMode.FillToRight;
             this.RegiatrationFormTabControl.TabIndex = 1;
+            this.RegiatrationFormTabControl.Click += new System.EventHandler(this.RegiatrationFormTabControl_Click);
             // 
             // ReportTabPage
             // 
@@ -147,13 +154,14 @@
             this.label2.TabIndex = 0;
             this.label2.Text = "Candidate Name: ";
             // 
-            // textBox1
+            // CandidateNametextBox
             // 
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(239, 15);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(537, 30);
-            this.textBox1.TabIndex = 1;
+            this.CandidateNametextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CandidateNametextBox.Location = new System.Drawing.Point(239, 15);
+            this.CandidateNametextBox.Name = "CandidateNametextBox";
+            this.CandidateNametextBox.Size = new System.Drawing.Size(537, 30);
+            this.CandidateNametextBox.TabIndex = 1;
+            this.CandidateNametextBox.TextChanged += new System.EventHandler(this.candidateNametextBox_TextChanged);
             // 
             // label3
             // 
@@ -164,13 +172,21 @@
             this.label3.TabIndex = 2;
             this.label3.Text = "Institute Name: ";
             // 
-            // comboBox1
+            // InstituteNamecomboBox
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(239, 69);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(537, 33);
-            this.comboBox1.TabIndex = 3;
+            this.InstituteNamecomboBox.FormattingEnabled = true;
+            this.InstituteNamecomboBox.Items.AddRange(new object[] {
+            "BASIS Institute of Technology & Management",
+            "New Horizons",
+            "Creative IT Institute",
+            "E-Soft IT Training Center",
+            "LEADS Training & Consulting Limited"});
+            this.InstituteNamecomboBox.Location = new System.Drawing.Point(239, 69);
+            this.InstituteNamecomboBox.Name = "InstituteNamecomboBox";
+            this.InstituteNamecomboBox.Size = new System.Drawing.Size(537, 33);
+            this.InstituteNamecomboBox.TabIndex = 3;
+            this.InstituteNamecomboBox.SelectedValueChanged += new System.EventHandler(this.InstituteNamecomboBox_SelectedValueChanged);
+            this.InstituteNamecomboBox.TextChanged += new System.EventHandler(this.InstituteNamecomboBox_TextChanged);
             // 
             // label4
             // 
@@ -181,21 +197,25 @@
             this.label4.TabIndex = 4;
             this.label4.Text = "Available Courses";
             // 
-            // comboBox2
+            // AvaliableCourseComboBox
             // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(239, 133);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(537, 33);
-            this.comboBox2.TabIndex = 5;
+            this.AvaliableCourseComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.AvaliableCourseComboBox.FormattingEnabled = true;
+            this.AvaliableCourseComboBox.Location = new System.Drawing.Point(239, 133);
+            this.AvaliableCourseComboBox.Name = "AvaliableCourseComboBox";
+            this.AvaliableCourseComboBox.Size = new System.Drawing.Size(537, 33);
+            this.AvaliableCourseComboBox.TabIndex = 5;
+            this.AvaliableCourseComboBox.SelectedValueChanged += new System.EventHandler(this.AvaliableCourseComboBox_SelectedValueChanged);
             // 
-            // comboBox3
+            // DurationComboBox
             // 
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Location = new System.Drawing.Point(239, 197);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(537, 33);
-            this.comboBox3.TabIndex = 7;
+            this.DurationComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.DurationComboBox.FormattingEnabled = true;
+            this.DurationComboBox.Location = new System.Drawing.Point(239, 197);
+            this.DurationComboBox.Name = "DurationComboBox";
+            this.DurationComboBox.Size = new System.Drawing.Size(537, 33);
+            this.DurationComboBox.TabIndex = 7;
+            this.DurationComboBox.SelectedIndexChanged += new System.EventHandler(this.DurationComboBox_SelectedIndexChanged);
             // 
             // label5
             // 
@@ -215,37 +235,61 @@
             this.label6.TabIndex = 8;
             this.label6.Text = "Courses Costing";
             // 
+            // CostLabel
+            // 
+            this.CostLabel.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.CostLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CostLabel.Location = new System.Drawing.Point(234, 263);
+            this.CostLabel.Name = "CostLabel";
+            this.CostLabel.Size = new System.Drawing.Size(491, 37);
+            this.CostLabel.TabIndex = 9;
+            this.CostLabel.Text = "0.0";
+            this.CostLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // RegisterButton
+            // 
+            this.RegisterButton.BackColor = System.Drawing.Color.MediumSeaGreen;
+            this.RegisterButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.RegisterButton.Location = new System.Drawing.Point(65, 352);
+            this.RegisterButton.Name = "RegisterButton";
+            this.RegisterButton.Size = new System.Drawing.Size(292, 81);
+            this.RegisterButton.TabIndex = 10;
+            this.RegisterButton.Text = "Register";
+            this.RegisterButton.UseVisualStyleBackColor = false;
+            this.RegisterButton.Click += new System.EventHandler(this.RegisterButton_Click);
+            // 
+            // receiptButton
+            // 
+            this.receiptButton.BackColor = System.Drawing.Color.LightYellow;
+            this.receiptButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.receiptButton.Location = new System.Drawing.Point(433, 352);
+            this.receiptButton.Name = "receiptButton";
+            this.receiptButton.Size = new System.Drawing.Size(292, 81);
+            this.receiptButton.TabIndex = 11;
+            this.receiptButton.Text = "Get Receipt";
+            this.receiptButton.UseVisualStyleBackColor = false;
+            this.receiptButton.Click += new System.EventHandler(this.receiptButton_Click);
+            // 
             // label7
             // 
-            this.label7.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(234, 263);
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(731, 267);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(542, 37);
-            this.label7.TabIndex = 9;
-            this.label7.Text = "label7";
+            this.label7.Size = new System.Drawing.Size(43, 29);
+            this.label7.TabIndex = 12;
+            this.label7.Text = "Tk";
             // 
-            // button1
+            // candidateDataGridView
             // 
-            this.button1.BackColor = System.Drawing.Color.MediumSeaGreen;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(65, 352);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(292, 81);
-            this.button1.TabIndex = 10;
-            this.button1.Text = "Register";
-            this.button1.UseVisualStyleBackColor = false;
-            // 
-            // button2
-            // 
-            this.button2.BackColor = System.Drawing.Color.LightYellow;
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(433, 352);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(292, 81);
-            this.button2.TabIndex = 11;
-            this.button2.Text = "Get Receipt";
-            this.button2.UseVisualStyleBackColor = false;
+            this.candidateDataGridView.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
+            this.candidateDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.candidateDataGridView.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.candidateDataGridView.Location = new System.Drawing.Point(3, 3);
+            this.candidateDataGridView.Name = "candidateDataGridView";
+            this.candidateDataGridView.RowTemplate.Height = 28;
+            this.candidateDataGridView.Size = new System.Drawing.Size(800, 534);
+            this.candidateDataGridView.TabIndex = 0;
             // 
             // TraningRegistrationForm
             // 
@@ -255,11 +299,14 @@
             this.Controls.Add(this.tableLayoutPanel1);
             this.Name = "TraningRegistrationForm";
             this.Text = "Training Registration Booth ";
+            this.Load += new System.EventHandler(this.TraningRegistrationForm_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
             this.RegistrationTabPage.ResumeLayout(false);
             this.RegistrationTabPage.PerformLayout();
+            this.ShowInfotabPage.ResumeLayout(false);
             this.RegiatrationFormTabControl.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.candidateDataGridView)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -272,18 +319,20 @@
         private System.Windows.Forms.TabPage RegistrationTabPage;
         private System.Windows.Forms.TabPage ShowInfotabPage;
         private System.Windows.Forms.TabPage ReportTabPage;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox CandidateNametextBox;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox InstituteNamecomboBox;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.ComboBox AvaliableCourseComboBox;
+        private System.Windows.Forms.Button receiptButton;
+        private System.Windows.Forms.Button RegisterButton;
+        private System.Windows.Forms.Label CostLabel;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.ComboBox comboBox3;
+        private System.Windows.Forms.ComboBox DurationComboBox;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.DataGridView candidateDataGridView;
     }
 }
 
