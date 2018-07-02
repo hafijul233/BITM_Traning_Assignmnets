@@ -19,6 +19,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "09PurchaseTicketMachince", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "10StandardCalculator", "10StandardCalculator\10StandardCalculator.csproj", "{178FE580-C952-4DAF-B142-25430A47E735}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TrainingRegistrationApp", "TrainingRegistrationApp\TrainingRegistrationApp.csproj", "{CBCE2DC8-A471-4C6F-BE26-9EC4DC94B9DD}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -57,6 +59,10 @@ Global
 		{178FE580-C952-4DAF-B142-25430A47E735}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{178FE580-C952-4DAF-B142-25430A47E735}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{178FE580-C952-4DAF-B142-25430A47E735}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CBCE2DC8-A471-4C6F-BE26-9EC4DC94B9DD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CBCE2DC8-A471-4C6F-BE26-9EC4DC94B9DD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CBCE2DC8-A471-4C6F-BE26-9EC4DC94B9DD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CBCE2DC8-A471-4C6F-BE26-9EC4DC94B9DD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

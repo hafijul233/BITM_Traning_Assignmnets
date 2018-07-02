@@ -195,6 +195,7 @@ namespace _10StandardCalculator
                 return;
             }
 
+
             foreach (char c in firstNumbertextBox.Text)
             {
                 if (c == '.')
