@@ -29,29 +29,31 @@
         private void InitializeComponent()
         {
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.RegistrationTabPage = new System.Windows.Forms.TabPage();
-            this.ShowInfotabPage = new System.Windows.Forms.TabPage();
             this.RegiatrationFormTabControl = new System.Windows.Forms.TabControl();
-            this.ReportTabPage = new System.Windows.Forms.TabPage();
-            this.label2 = new System.Windows.Forms.Label();
-            this.CandidateNametextBox = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.InstituteNamecomboBox = new System.Windows.Forms.ComboBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.AvaliableCourseComboBox = new System.Windows.Forms.ComboBox();
+            this.RegistrationTabPage = new System.Windows.Forms.TabPage();
+            this.label7 = new System.Windows.Forms.Label();
+            this.receiptButton = new System.Windows.Forms.Button();
+            this.RegisterButton = new System.Windows.Forms.Button();
+            this.CostLabel = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
             this.DurationComboBox = new System.Windows.Forms.ComboBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.CostLabel = new System.Windows.Forms.Label();
-            this.RegisterButton = new System.Windows.Forms.Button();
-            this.receiptButton = new System.Windows.Forms.Button();
-            this.label7 = new System.Windows.Forms.Label();
+            this.AvaliableCourseComboBox = new System.Windows.Forms.ComboBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.InstituteNamecomboBox = new System.Windows.Forms.ComboBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.CandidateNametextBox = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.ShowInfotabPage = new System.Windows.Forms.TabPage();
             this.candidateDataGridView = new System.Windows.Forms.DataGridView();
+            this.ReportTabPage = new System.Windows.Forms.TabPage();
+            this.label1 = new System.Windows.Forms.Label();
+            this.SeatTextBox = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
             this.tableLayoutPanel1.SuspendLayout();
+            this.RegiatrationFormTabControl.SuspendLayout();
             this.RegistrationTabPage.SuspendLayout();
             this.ShowInfotabPage.SuspendLayout();
-            this.RegiatrationFormTabControl.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.candidateDataGridView)).BeginInit();
             this.SuspendLayout();
             // 
@@ -71,22 +73,27 @@
             this.tableLayoutPanel1.Size = new System.Drawing.Size(820, 671);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
-            // label1
+            // RegiatrationFormTabControl
             // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.label1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(3, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(814, 87);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Training Registration Program";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.RegiatrationFormTabControl.Controls.Add(this.RegistrationTabPage);
+            this.RegiatrationFormTabControl.Controls.Add(this.ShowInfotabPage);
+            this.RegiatrationFormTabControl.Controls.Add(this.ReportTabPage);
+            this.RegiatrationFormTabControl.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.RegiatrationFormTabControl.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.RegiatrationFormTabControl.Location = new System.Drawing.Point(3, 90);
+            this.RegiatrationFormTabControl.Multiline = true;
+            this.RegiatrationFormTabControl.Name = "RegiatrationFormTabControl";
+            this.RegiatrationFormTabControl.SelectedIndex = 0;
+            this.RegiatrationFormTabControl.Size = new System.Drawing.Size(814, 578);
+            this.RegiatrationFormTabControl.SizeMode = System.Windows.Forms.TabSizeMode.FillToRight;
+            this.RegiatrationFormTabControl.TabIndex = 1;
+            this.RegiatrationFormTabControl.Click += new System.EventHandler(this.RegiatrationFormTabControl_Click);
             // 
             // RegistrationTabPage
             // 
             this.RegistrationTabPage.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.RegistrationTabPage.Controls.Add(this.SeatTextBox);
+            this.RegistrationTabPage.Controls.Add(this.label8);
             this.RegistrationTabPage.Controls.Add(this.label7);
             this.RegistrationTabPage.Controls.Add(this.receiptButton);
             this.RegistrationTabPage.Controls.Add(this.RegisterButton);
@@ -108,104 +115,59 @@
             this.RegistrationTabPage.TabIndex = 0;
             this.RegistrationTabPage.Text = "Registration Form";
             // 
-            // ShowInfotabPage
+            // label7
             // 
-            this.ShowInfotabPage.BackColor = System.Drawing.SystemColors.Info;
-            this.ShowInfotabPage.Controls.Add(this.candidateDataGridView);
-            this.ShowInfotabPage.Location = new System.Drawing.Point(4, 34);
-            this.ShowInfotabPage.Name = "ShowInfotabPage";
-            this.ShowInfotabPage.Padding = new System.Windows.Forms.Padding(3);
-            this.ShowInfotabPage.Size = new System.Drawing.Size(806, 540);
-            this.ShowInfotabPage.TabIndex = 1;
-            this.ShowInfotabPage.Text = "Registrated Candidate List";
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(731, 267);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(43, 29);
+            this.label7.TabIndex = 12;
+            this.label7.Text = "Tk";
             // 
-            // RegiatrationFormTabControl
+            // receiptButton
             // 
-            this.RegiatrationFormTabControl.Controls.Add(this.RegistrationTabPage);
-            this.RegiatrationFormTabControl.Controls.Add(this.ShowInfotabPage);
-            this.RegiatrationFormTabControl.Controls.Add(this.ReportTabPage);
-            this.RegiatrationFormTabControl.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.RegiatrationFormTabControl.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.RegiatrationFormTabControl.Location = new System.Drawing.Point(3, 90);
-            this.RegiatrationFormTabControl.Multiline = true;
-            this.RegiatrationFormTabControl.Name = "RegiatrationFormTabControl";
-            this.RegiatrationFormTabControl.SelectedIndex = 0;
-            this.RegiatrationFormTabControl.Size = new System.Drawing.Size(814, 578);
-            this.RegiatrationFormTabControl.SizeMode = System.Windows.Forms.TabSizeMode.FillToRight;
-            this.RegiatrationFormTabControl.TabIndex = 1;
-            this.RegiatrationFormTabControl.Click += new System.EventHandler(this.RegiatrationFormTabControl_Click);
+            this.receiptButton.BackColor = System.Drawing.Color.LightYellow;
+            this.receiptButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.receiptButton.Location = new System.Drawing.Point(433, 435);
+            this.receiptButton.Name = "receiptButton";
+            this.receiptButton.Size = new System.Drawing.Size(292, 81);
+            this.receiptButton.TabIndex = 11;
+            this.receiptButton.Text = "Get Receipt";
+            this.receiptButton.UseVisualStyleBackColor = false;
+            this.receiptButton.Click += new System.EventHandler(this.receiptButton_Click);
             // 
-            // ReportTabPage
+            // RegisterButton
             // 
-            this.ReportTabPage.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.ReportTabPage.Location = new System.Drawing.Point(4, 34);
-            this.ReportTabPage.Name = "ReportTabPage";
-            this.ReportTabPage.Padding = new System.Windows.Forms.Padding(3);
-            this.ReportTabPage.Size = new System.Drawing.Size(806, 540);
-            this.ReportTabPage.TabIndex = 2;
-            this.ReportTabPage.Text = "Status Report";
+            this.RegisterButton.BackColor = System.Drawing.Color.MediumSeaGreen;
+            this.RegisterButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.RegisterButton.Location = new System.Drawing.Point(65, 435);
+            this.RegisterButton.Name = "RegisterButton";
+            this.RegisterButton.Size = new System.Drawing.Size(292, 81);
+            this.RegisterButton.TabIndex = 10;
+            this.RegisterButton.Text = "Register";
+            this.RegisterButton.UseVisualStyleBackColor = false;
+            this.RegisterButton.Click += new System.EventHandler(this.RegisterButton_Click);
             // 
-            // label2
+            // CostLabel
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(18, 18);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(170, 25);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "Candidate Name: ";
+            this.CostLabel.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.CostLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CostLabel.Location = new System.Drawing.Point(239, 263);
+            this.CostLabel.Name = "CostLabel";
+            this.CostLabel.Size = new System.Drawing.Size(486, 37);
+            this.CostLabel.TabIndex = 9;
+            this.CostLabel.Text = "0.0";
+            this.CostLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // CandidateNametextBox
+            // label6
             // 
-            this.CandidateNametextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CandidateNametextBox.Location = new System.Drawing.Point(239, 15);
-            this.CandidateNametextBox.Name = "CandidateNametextBox";
-            this.CandidateNametextBox.Size = new System.Drawing.Size(537, 30);
-            this.CandidateNametextBox.TabIndex = 1;
-            this.CandidateNametextBox.TextChanged += new System.EventHandler(this.candidateNametextBox_TextChanged);
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(18, 72);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(147, 25);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "Institute Name: ";
-            // 
-            // InstituteNamecomboBox
-            // 
-            this.InstituteNamecomboBox.FormattingEnabled = true;
-            this.InstituteNamecomboBox.Items.AddRange(new object[] {
-            "BASIS Institute of Technology & Management",
-            "New Horizons",
-            "Creative IT Institute",
-            "E-Soft IT Training Center",
-            "LEADS Training & Consulting Limited"});
-            this.InstituteNamecomboBox.Location = new System.Drawing.Point(239, 69);
-            this.InstituteNamecomboBox.Name = "InstituteNamecomboBox";
-            this.InstituteNamecomboBox.Size = new System.Drawing.Size(537, 33);
-            this.InstituteNamecomboBox.TabIndex = 3;
-            this.InstituteNamecomboBox.SelectedValueChanged += new System.EventHandler(this.InstituteNamecomboBox_SelectedValueChanged);
-            this.InstituteNamecomboBox.TextChanged += new System.EventHandler(this.InstituteNamecomboBox_TextChanged);
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(18, 136);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(171, 25);
-            this.label4.TabIndex = 4;
-            this.label4.Text = "Available Courses";
-            // 
-            // AvaliableCourseComboBox
-            // 
-            this.AvaliableCourseComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.AvaliableCourseComboBox.FormattingEnabled = true;
-            this.AvaliableCourseComboBox.Location = new System.Drawing.Point(239, 133);
-            this.AvaliableCourseComboBox.Name = "AvaliableCourseComboBox";
-            this.AvaliableCourseComboBox.Size = new System.Drawing.Size(537, 33);
-            this.AvaliableCourseComboBox.TabIndex = 5;
-            this.AvaliableCourseComboBox.SelectedValueChanged += new System.EventHandler(this.AvaliableCourseComboBox_SelectedValueChanged);
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(18, 266);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(158, 25);
+            this.label6.TabIndex = 8;
+            this.label6.Text = "Courses Costing";
             // 
             // DurationComboBox
             // 
@@ -226,59 +188,78 @@
             this.label5.TabIndex = 6;
             this.label5.Text = "Courses Duration";
             // 
-            // label6
+            // AvaliableCourseComboBox
             // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(18, 266);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(158, 25);
-            this.label6.TabIndex = 8;
-            this.label6.Text = "Courses Costing";
+            this.AvaliableCourseComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.AvaliableCourseComboBox.FormattingEnabled = true;
+            this.AvaliableCourseComboBox.Location = new System.Drawing.Point(239, 133);
+            this.AvaliableCourseComboBox.Name = "AvaliableCourseComboBox";
+            this.AvaliableCourseComboBox.Size = new System.Drawing.Size(537, 33);
+            this.AvaliableCourseComboBox.TabIndex = 5;
+            this.AvaliableCourseComboBox.SelectedValueChanged += new System.EventHandler(this.AvaliableCourseComboBox_SelectedValueChanged);
             // 
-            // CostLabel
+            // label4
             // 
-            this.CostLabel.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.CostLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CostLabel.Location = new System.Drawing.Point(234, 263);
-            this.CostLabel.Name = "CostLabel";
-            this.CostLabel.Size = new System.Drawing.Size(491, 37);
-            this.CostLabel.TabIndex = 9;
-            this.CostLabel.Text = "0.0";
-            this.CostLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(18, 136);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(171, 25);
+            this.label4.TabIndex = 4;
+            this.label4.Text = "Available Courses";
             // 
-            // RegisterButton
+            // InstituteNamecomboBox
             // 
-            this.RegisterButton.BackColor = System.Drawing.Color.MediumSeaGreen;
-            this.RegisterButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.RegisterButton.Location = new System.Drawing.Point(65, 352);
-            this.RegisterButton.Name = "RegisterButton";
-            this.RegisterButton.Size = new System.Drawing.Size(292, 81);
-            this.RegisterButton.TabIndex = 10;
-            this.RegisterButton.Text = "Register";
-            this.RegisterButton.UseVisualStyleBackColor = false;
-            this.RegisterButton.Click += new System.EventHandler(this.RegisterButton_Click);
+            this.InstituteNamecomboBox.FormattingEnabled = true;
+            this.InstituteNamecomboBox.Items.AddRange(new object[] {
+            "BASIS Institute of Technology & Management",
+            "New Horizons",
+            "Creative IT Institute",
+            "E-Soft IT Training Center",
+            "LEADS Training & Consulting Limited"});
+            this.InstituteNamecomboBox.Location = new System.Drawing.Point(239, 69);
+            this.InstituteNamecomboBox.Name = "InstituteNamecomboBox";
+            this.InstituteNamecomboBox.Size = new System.Drawing.Size(537, 33);
+            this.InstituteNamecomboBox.TabIndex = 3;
+            this.InstituteNamecomboBox.SelectedValueChanged += new System.EventHandler(this.InstituteNamecomboBox_SelectedValueChanged);
+            this.InstituteNamecomboBox.TextChanged += new System.EventHandler(this.InstituteNamecomboBox_TextChanged);
             // 
-            // receiptButton
+            // label3
             // 
-            this.receiptButton.BackColor = System.Drawing.Color.LightYellow;
-            this.receiptButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.receiptButton.Location = new System.Drawing.Point(433, 352);
-            this.receiptButton.Name = "receiptButton";
-            this.receiptButton.Size = new System.Drawing.Size(292, 81);
-            this.receiptButton.TabIndex = 11;
-            this.receiptButton.Text = "Get Receipt";
-            this.receiptButton.UseVisualStyleBackColor = false;
-            this.receiptButton.Click += new System.EventHandler(this.receiptButton_Click);
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(18, 72);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(147, 25);
+            this.label3.TabIndex = 2;
+            this.label3.Text = "Institute Name: ";
             // 
-            // label7
+            // CandidateNametextBox
             // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(731, 267);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(43, 29);
-            this.label7.TabIndex = 12;
-            this.label7.Text = "Tk";
+            this.CandidateNametextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CandidateNametextBox.Location = new System.Drawing.Point(239, 15);
+            this.CandidateNametextBox.Name = "CandidateNametextBox";
+            this.CandidateNametextBox.Size = new System.Drawing.Size(537, 35);
+            this.CandidateNametextBox.TabIndex = 1;
+            this.CandidateNametextBox.TextChanged += new System.EventHandler(this.candidateNametextBox_TextChanged);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(18, 18);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(170, 25);
+            this.label2.TabIndex = 0;
+            this.label2.Text = "Candidate Name: ";
+            // 
+            // ShowInfotabPage
+            // 
+            this.ShowInfotabPage.BackColor = System.Drawing.SystemColors.Info;
+            this.ShowInfotabPage.Controls.Add(this.candidateDataGridView);
+            this.ShowInfotabPage.Location = new System.Drawing.Point(4, 34);
+            this.ShowInfotabPage.Name = "ShowInfotabPage";
+            this.ShowInfotabPage.Padding = new System.Windows.Forms.Padding(3);
+            this.ShowInfotabPage.Size = new System.Drawing.Size(806, 540);
+            this.ShowInfotabPage.TabIndex = 1;
+            this.ShowInfotabPage.Text = "Registrated Candidate List";
             // 
             // candidateDataGridView
             // 
@@ -291,6 +272,48 @@
             this.candidateDataGridView.Size = new System.Drawing.Size(800, 534);
             this.candidateDataGridView.TabIndex = 0;
             // 
+            // ReportTabPage
+            // 
+            this.ReportTabPage.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.ReportTabPage.Location = new System.Drawing.Point(4, 34);
+            this.ReportTabPage.Name = "ReportTabPage";
+            this.ReportTabPage.Padding = new System.Windows.Forms.Padding(3);
+            this.ReportTabPage.Size = new System.Drawing.Size(806, 540);
+            this.ReportTabPage.TabIndex = 2;
+            this.ReportTabPage.Text = "Status Report";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.label1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(3, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(814, 87);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Training Registration Program";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // SeatTextBox
+            // 
+            this.SeatTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SeatTextBox.Location = new System.Drawing.Point(239, 336);
+            this.SeatTextBox.Name = "SeatTextBox";
+            this.SeatTextBox.Size = new System.Drawing.Size(196, 35);
+            this.SeatTextBox.TabIndex = 14;
+            this.SeatTextBox.Text = "1";
+            this.SeatTextBox.TextChanged += new System.EventHandler(this.SeatTextBox_TextChanged);
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(16, 342);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(172, 25);
+            this.label8.TabIndex = 13;
+            this.label8.Text = "Seat Reservation: ";
+            // 
             // TraningRegistrationForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -302,10 +325,10 @@
             this.Load += new System.EventHandler(this.TraningRegistrationForm_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
+            this.RegiatrationFormTabControl.ResumeLayout(false);
             this.RegistrationTabPage.ResumeLayout(false);
             this.RegistrationTabPage.PerformLayout();
             this.ShowInfotabPage.ResumeLayout(false);
-            this.RegiatrationFormTabControl.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.candidateDataGridView)).EndInit();
             this.ResumeLayout(false);
 
@@ -333,6 +356,8 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.DataGridView candidateDataGridView;
+        private System.Windows.Forms.TextBox SeatTextBox;
+        private System.Windows.Forms.Label label8;
     }
 }
 

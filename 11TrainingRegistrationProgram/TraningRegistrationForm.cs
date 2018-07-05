@@ -19,31 +19,41 @@ namespace TrainingRegistrationApp
 
         private string _programTitle = "Training Regiatration Booth";
 
-        private string [,] _registrationinfo = new string[10,5];
+        private string [,] _registrationinfo = new string[10,6];
 
         private int _lastCount = 0;
 
+        private int _durationIndex = 0;
+
         private DataTable _CandidateInfo = new DataTable();
 
-        private void CoursePayment(string CourseName, int durationIndex)
+        private void CoursePayment(int durationIndex, string seat)
         {
+            int seats = Convert.ToInt32(seat);
+
+            double price = 0.0;
+
             switch (durationIndex)
             {
-                case 0: CostLabel.Text = "30,000";
+                case 0: price = 30000.00;
                     break;
 
                 case 1:
-                    CostLabel.Text = "60,000";
+                    price = 60000.00;
                     break;
 
                 case 2:
-                    CostLabel.Text = "1,00,000";
+                    price = 100000.00;
                     break;
 
                 default:
-                    CostLabel.Text = "0.0";
+                    price = 0.0;
                     break;
             }
+
+            price = seats * price;
+
+            CostLabel.Text = price.ToString();
         }
 
         private void TraningRegistrationForm_Load(object sender, EventArgs e)
@@ -55,6 +65,7 @@ namespace TrainingRegistrationApp
             _CandidateInfo.Columns.Add("Applied Course");
             _CandidateInfo.Columns.Add("Course Duration");
             _CandidateInfo.Columns.Add("Course Payment");
+            _CandidateInfo.Columns.Add("Seats");
         }
 
         private void candidateNametextBox_TextChanged(object sender, EventArgs e)
@@ -152,9 +163,45 @@ namespace TrainingRegistrationApp
 
         private void DurationComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
-            int durationIndex = DurationComboBox.Items.IndexOf(DurationComboBox.Text);
+            _durationIndex = DurationComboBox.Items.IndexOf(DurationComboBox.Text);
 
-            CoursePayment(AvaliableCourseComboBox.Text, durationIndex);
+            string seatNumber = SeatTextBox.Text;
+
+            CoursePayment(_durationIndex, seatNumber);
+
+        }
+
+        private void SeatTextBox_TextChanged(object sender, EventArgs e)
+        {
+            string temp = SeatTextBox.Text;
+            int seatSize = 0;
+            if (temp.Length == 0)
+            {
+                SeatTextBox.Text = "1";
+            }
+
+            else{
+
+                seatSize = Convert.ToInt32(temp);
+
+                foreach (char c in temp)
+                {
+                    if (Char.IsDigit(c) == false)
+                    {
+                        MessageBox.Show("Only Numbers Are Allowed.", _programTitle);
+                    }
+                }
+            }
+
+            if (seatSize < 1 || seatSize > 15 || temp.Length > 2)
+            {
+                MessageBox.Show("Seat Reservation Range between 1 to 15.", _programTitle);
+            }
+            else
+            {
+                CoursePayment(_durationIndex, temp);
+            }
+
         }
 
         private void RegisterButton_Click(object sender, EventArgs e)
@@ -172,6 +219,7 @@ namespace TrainingRegistrationApp
                 _registrationinfo[_lastCount, 2] = AvaliableCourseComboBox.Text;
                 _registrationinfo[_lastCount, 3] = DurationComboBox.Text;
                 _registrationinfo[_lastCount, 4] = CostLabel.Text;
+                _registrationinfo[_lastCount, 5] = SeatTextBox.Text;
 
                 _lastCount++;
 
@@ -181,6 +229,7 @@ namespace TrainingRegistrationApp
             InstituteNamecomboBox.Text = String.Empty;
             AvaliableCourseComboBox.Text = String.Empty;
             DurationComboBox.Text = String.Empty;
+            SeatTextBox.Text = "";
             CostLabel.Text = "0.0";
         }
 
@@ -200,6 +249,7 @@ namespace TrainingRegistrationApp
                              "Institute Name: \t" + _registrationinfo[_lastCount - 1, 1] + "\n" +
                              "applied Course: \t" + _registrationinfo[_lastCount - 1, 2] + "\n" +
                              "Course Duration: \t" + _registrationinfo[_lastCount - 1, 3] + "\n" +
+                             "Seat Reservation: \t" + _registrationinfo[_lastCount - 1, 5] + "\n" +
                              "Payment: \t\t" + _registrationinfo[_lastCount - 1, 4] + "Taka Only";
 
             MessageBox.Show(receipt, _programTitle, MessageBoxButtons.OK);
@@ -210,11 +260,12 @@ namespace TrainingRegistrationApp
 
             for (int i = 0; i < _lastCount; i++)
             {
-                _CandidateInfo.Rows.Add(new object[] { _registrationinfo[i,0], _registrationinfo[i,1], _registrationinfo[i,2], _registrationinfo[i,3], _registrationinfo[i,4]});
+                _CandidateInfo.Rows.Add(new object[] { _registrationinfo[i,0], _registrationinfo[i,1], _registrationinfo[i,2], _registrationinfo[i,3], _registrationinfo[i,4], _registrationinfo[i, 5] });
             }
 
             candidateDataGridView.DataSource = _CandidateInfo;
 
         }
+
     }
 }
