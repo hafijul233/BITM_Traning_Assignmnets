@@ -250,7 +250,7 @@
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Name = "RegistrationSearchUi";
-            this.Text = "Registration Booth";
+            this.Text = "Student Registration Booth";
             this.Load += new System.EventHandler(this.RegistrationSearchUi_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
