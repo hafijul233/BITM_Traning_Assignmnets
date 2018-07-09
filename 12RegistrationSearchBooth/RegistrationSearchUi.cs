@@ -16,6 +16,16 @@ namespace _12RegistrationSearchBooth
 
         private string[,] _studentInfo = new string[20,4];
 
+        private string _studentFullname = String.Empty;
+
+        private string _studentRegistrationno = String.Empty;
+
+        private string _studentClassRoll = String.Empty;
+
+        private string _studentAddress = String.Empty;
+
+        private int _studentCounterIndex = 0;
+
         public RegistrationSearchUi()
         {
             InitializeComponent();
@@ -23,10 +33,6 @@ namespace _12RegistrationSearchBooth
 
         private void RegistrationSearchUi_Load(object sender, EventArgs e)
         {
-            StudentInfoListView.Columns.Add("Registration No.");
-            StudentInfoListView.Columns.Add("Full Name");
-            StudentInfoListView.Columns.Add("Class Roll");
-            StudentInfoListView.Columns.Add("Address");
 
         }
 
@@ -47,6 +53,16 @@ namespace _12RegistrationSearchBooth
                 }
             }
 
+        }
+
+        private void StudentAddToList(string registationno, string firstname, string classroll, string address)
+        {
+            ListViewItem student = new ListViewItem(registationno);
+            student.SubItems.Add(firstname);
+            student.SubItems.Add(classroll);
+            student.SubItems.Add(address);
+
+            StudentInfoListView.Items.Add(student);
         }
 
         private void FullNameTextBox_TextChanged(object sender, EventArgs e)
@@ -77,10 +93,106 @@ namespace _12RegistrationSearchBooth
             }
             else
             {
-                
+                _studentRegistrationno = RegistrationNoTextBox.Text;
+                _studentFullname = FullNameTextBox.Text;
+                _studentClassRoll = ClassRollTextBox.Text;
+                _studentAddress = AddressTextBox.Text;
+
+                _studentInfo[_studentCounterIndex, 0] = _studentRegistrationno; // registration columns
+                _studentInfo[_studentCounterIndex, 1] = _studentFullname; // full name columns
+                _studentInfo[_studentCounterIndex, 2] = _studentClassRoll; // class roll
+                _studentInfo[_studentCounterIndex, 3] = _studentAddress; // address
+
+                MessageBox.Show("Student Information Registration Completed.", _programTitle);
+
+                StudentAddToList(_studentInfo[_studentCounterIndex, 0], _studentInfo[_studentCounterIndex, 1], _studentInfo[_studentCounterIndex, 2], _studentInfo[_studentCounterIndex, 3]);
+
+                _studentCounterIndex++;
+
+                //clearing form values
+
+                RegistrationNoTextBox.Text = String.Empty;
+                FullNameTextBox.Text = String.Empty;
+                ClassRollTextBox.Text = String.Empty;
+                AddressTextBox.Text = String.Empty;
+
             }
         }
 
-        
+        private void ClearButton_Click(object sender, EventArgs e)
+        {
+            RegistrationNoTextBox.Text = String.Empty;
+            FullNameTextBox.Text = String.Empty;
+            ClassRollTextBox.Text = String.Empty;
+            AddressTextBox.Text = String.Empty;
+        }
+
+        private void SearchButton_Click(object sender, EventArgs e)
+        {
+            StudentInfoListView.Clear();
+
+                StudentInfoListView.Columns.Add("Registration No.", 120);
+                StudentInfoListView.Columns.Add("Full Name", 120);
+                StudentInfoListView.Columns.Add("Roll", 80);
+                StudentInfoListView.Columns.Add("Address", 180);
+
+            if (SearchValueTextBox.Text == String.Empty)
+            {
+                for (int i = 0; i < _studentCounterIndex; i++)
+                {
+                    StudentAddToList(_studentInfo[i, 0],
+                                     _studentInfo[i, 1],
+                                     _studentInfo[i, 2],
+                                     _studentInfo[i, 3]);
+                }
+            }
+
+            else
+            {
+                string value = SearchValueTextBox.Text;
+
+                bool warning = true;
+
+                for(int i = 0; i<_studentCounterIndex; i++)
+                {
+                
+                    for(int j=0; j<4; j++)
+                    {
+                        bool searchResult = _studentInfo[i, j].Contains(value);
+
+                        if(searchResult == true)
+                        {
+                            StudentAddToList(_studentInfo[i, 0],
+                                     _studentInfo[i, 1],
+                                     _studentInfo[i, 2],
+                                     _studentInfo[i, 3]);
+
+                            warning = false;
+
+                            break;
+                        }
+                    }
+                }
+
+                if(warning == true)
+                {
+                    MessageBox.Show("No Result Found", _programTitle);
+                }
+            }
+        }
+
+        private void SearchValueTextBox_TextChanged(object sender, EventArgs e)
+        {
+            string temp = SearchValueTextBox.Text;
+
+            foreach(char c in temp)
+            {
+                if(Char.IsPunctuation(c) == true)
+                {
+                    MessageBox.Show("Punctuations Are not Allowed in Search.", _programTitle, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+        }
+
     }
 }

@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.ClearButton = new System.Windows.Forms.Button();
             this.SaveButton = new System.Windows.Forms.Button();
             this.AddressTextBox = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
@@ -39,16 +40,21 @@
             this.FullNameTextBox = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.button2 = new System.Windows.Forms.Button();
-            this.textBox5 = new System.Windows.Forms.TextBox();
             this.StudentInfoListView = new System.Windows.Forms.ListView();
+            this.label5 = new System.Windows.Forms.Label();
+            this.SearchButton = new System.Windows.Forms.Button();
+            this.SearchValueTextBox = new System.Windows.Forms.TextBox();
+            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.ClearButton);
             this.groupBox1.Controls.Add(this.SaveButton);
             this.groupBox1.Controls.Add(this.AddressTextBox);
             this.groupBox1.Controls.Add(this.label4);
@@ -61,17 +67,29 @@
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(12, 12);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(434, 555);
+            this.groupBox1.Size = new System.Drawing.Size(434, 699);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Student Registration Form";
             // 
+            // ClearButton
+            // 
+            this.ClearButton.BackColor = System.Drawing.Color.IndianRed;
+            this.ClearButton.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.ClearButton.Location = new System.Drawing.Point(229, 610);
+            this.ClearButton.Name = "ClearButton";
+            this.ClearButton.Size = new System.Drawing.Size(175, 54);
+            this.ClearButton.TabIndex = 9;
+            this.ClearButton.Text = "Clear";
+            this.ClearButton.UseVisualStyleBackColor = false;
+            this.ClearButton.Click += new System.EventHandler(this.ClearButton_Click);
+            // 
             // SaveButton
             // 
             this.SaveButton.BackColor = System.Drawing.SystemColors.Highlight;
-            this.SaveButton.Location = new System.Drawing.Point(37, 480);
+            this.SaveButton.Location = new System.Drawing.Point(29, 610);
             this.SaveButton.Name = "SaveButton";
-            this.SaveButton.Size = new System.Drawing.Size(332, 54);
+            this.SaveButton.Size = new System.Drawing.Size(175, 54);
             this.SaveButton.TabIndex = 8;
             this.SaveButton.Text = "Save Info";
             this.SaveButton.UseVisualStyleBackColor = false;
@@ -79,7 +97,7 @@
             // 
             // AddressTextBox
             // 
-            this.AddressTextBox.Location = new System.Drawing.Point(29, 320);
+            this.AddressTextBox.Location = new System.Drawing.Point(29, 441);
             this.AddressTextBox.Multiline = true;
             this.AddressTextBox.Name = "AddressTextBox";
             this.AddressTextBox.Size = new System.Drawing.Size(375, 127);
@@ -88,7 +106,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(24, 292);
+            this.label4.Location = new System.Drawing.Point(24, 403);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(99, 25);
             this.label4.TabIndex = 6;
@@ -96,7 +114,7 @@
             // 
             // ClassRollTextBox
             // 
-            this.ClassRollTextBox.Location = new System.Drawing.Point(29, 243);
+            this.ClassRollTextBox.Location = new System.Drawing.Point(29, 325);
             this.ClassRollTextBox.Name = "ClassRollTextBox";
             this.ClassRollTextBox.Size = new System.Drawing.Size(375, 30);
             this.ClassRollTextBox.TabIndex = 5;
@@ -105,7 +123,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(24, 215);
+            this.label3.Location = new System.Drawing.Point(24, 287);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(197, 25);
             this.label3.TabIndex = 4;
@@ -113,7 +131,7 @@
             // 
             // RegistrationNoTextBox
             // 
-            this.RegistrationNoTextBox.Location = new System.Drawing.Point(29, 162);
+            this.RegistrationNoTextBox.Location = new System.Drawing.Point(29, 202);
             this.RegistrationNoTextBox.Name = "RegistrationNoTextBox";
             this.RegistrationNoTextBox.Size = new System.Drawing.Size(375, 30);
             this.RegistrationNoTextBox.TabIndex = 3;
@@ -122,7 +140,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(24, 134);
+            this.label2.Location = new System.Drawing.Point(24, 165);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(214, 25);
             this.label2.TabIndex = 2;
@@ -130,7 +148,7 @@
             // 
             // FullNameTextBox
             // 
-            this.FullNameTextBox.Location = new System.Drawing.Point(29, 71);
+            this.FullNameTextBox.Location = new System.Drawing.Point(29, 92);
             this.FullNameTextBox.Name = "FullNameTextBox";
             this.FullNameTextBox.Size = new System.Drawing.Size(375, 30);
             this.FullNameTextBox.TabIndex = 1;
@@ -139,7 +157,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(24, 43);
+            this.label1.Location = new System.Drawing.Point(24, 50);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(188, 25);
             this.label1.TabIndex = 0;
@@ -149,8 +167,8 @@
             // 
             this.groupBox2.Controls.Add(this.StudentInfoListView);
             this.groupBox2.Controls.Add(this.label5);
-            this.groupBox2.Controls.Add(this.button2);
-            this.groupBox2.Controls.Add(this.textBox5);
+            this.groupBox2.Controls.Add(this.SearchButton);
+            this.groupBox2.Controls.Add(this.SearchValueTextBox);
             this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox2.Location = new System.Drawing.Point(465, 12);
             this.groupBox2.Name = "groupBox2";
@@ -158,6 +176,23 @@
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Student Registration Query Box";
+            // 
+            // StudentInfoListView
+            // 
+            this.StudentInfoListView.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader1,
+            this.columnHeader2,
+            this.columnHeader3,
+            this.columnHeader4});
+            this.StudentInfoListView.FullRowSelect = true;
+            this.StudentInfoListView.GridLines = true;
+            this.StudentInfoListView.Location = new System.Drawing.Point(18, 134);
+            this.StudentInfoListView.Name = "StudentInfoListView";
+            this.StudentInfoListView.Size = new System.Drawing.Size(810, 548);
+            this.StudentInfoListView.Sorting = System.Windows.Forms.SortOrder.Ascending;
+            this.StudentInfoListView.TabIndex = 4;
+            this.StudentInfoListView.UseCompatibleStateImageBehavior = false;
+            this.StudentInfoListView.View = System.Windows.Forms.View.Details;
             // 
             // label5
             // 
@@ -168,34 +203,44 @@
             this.label5.TabIndex = 3;
             this.label5.Text = "Search Result:";
             // 
-            // button2
+            // SearchButton
             // 
-            this.button2.BackColor = System.Drawing.SystemColors.Info;
-            this.button2.Location = new System.Drawing.Point(606, 37);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(193, 46);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "Search";
-            this.button2.UseVisualStyleBackColor = false;
+            this.SearchButton.BackColor = System.Drawing.SystemColors.Info;
+            this.SearchButton.Location = new System.Drawing.Point(606, 37);
+            this.SearchButton.Name = "SearchButton";
+            this.SearchButton.Size = new System.Drawing.Size(193, 46);
+            this.SearchButton.TabIndex = 1;
+            this.SearchButton.Text = "Search";
+            this.SearchButton.UseVisualStyleBackColor = false;
+            this.SearchButton.Click += new System.EventHandler(this.SearchButton_Click);
             // 
-            // textBox5
+            // SearchValueTextBox
             // 
-            this.textBox5.Location = new System.Drawing.Point(31, 45);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(539, 30);
-            this.textBox5.TabIndex = 0;
+            this.SearchValueTextBox.Location = new System.Drawing.Point(31, 45);
+            this.SearchValueTextBox.Name = "SearchValueTextBox";
+            this.SearchValueTextBox.Size = new System.Drawing.Size(539, 30);
+            this.SearchValueTextBox.TabIndex = 0;
+            this.SearchValueTextBox.TextChanged += new System.EventHandler(this.SearchValueTextBox_TextChanged);
             // 
-            // StudentInfoListView
+            // columnHeader1
             // 
-            this.StudentInfoListView.FullRowSelect = true;
-            this.StudentInfoListView.GridLines = true;
-            this.StudentInfoListView.Location = new System.Drawing.Point(18, 134);
-            this.StudentInfoListView.Name = "StudentInfoListView";
-            this.StudentInfoListView.Size = new System.Drawing.Size(810, 548);
-            this.StudentInfoListView.Sorting = System.Windows.Forms.SortOrder.Ascending;
-            this.StudentInfoListView.TabIndex = 4;
-            this.StudentInfoListView.UseCompatibleStateImageBehavior = false;
-            this.StudentInfoListView.View = System.Windows.Forms.View.Details;
+            this.columnHeader1.Text = "Registration No.";
+            this.columnHeader1.Width = 120;
+            // 
+            // columnHeader2
+            // 
+            this.columnHeader2.Text = "Full Name";
+            this.columnHeader2.Width = 120;
+            // 
+            // columnHeader3
+            // 
+            this.columnHeader3.Text = "Roll";
+            this.columnHeader3.Width = 80;
+            // 
+            // columnHeader4
+            // 
+            this.columnHeader4.Text = "Address";
+            this.columnHeader4.Width = 180;
             // 
             // RegistrationSearchUi
             // 
@@ -228,10 +273,15 @@
         private System.Windows.Forms.TextBox RegistrationNoTextBox;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button SaveButton;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.Button SearchButton;
+        private System.Windows.Forms.TextBox SearchValueTextBox;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.ListView StudentInfoListView;
+        private System.Windows.Forms.Button ClearButton;
+        private System.Windows.Forms.ColumnHeader columnHeader1;
+        private System.Windows.Forms.ColumnHeader columnHeader2;
+        private System.Windows.Forms.ColumnHeader columnHeader3;
+        private System.Windows.Forms.ColumnHeader columnHeader4;
     }
 }
 
