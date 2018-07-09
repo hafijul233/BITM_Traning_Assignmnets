@@ -269,7 +269,7 @@
             this.ClientSize = new System.Drawing.Size(713, 645);
             this.Controls.Add(this.groupBox1);
             this.Name = "LunchBillCalculatorUi";
-            this.Text = "LunchBillCalculatorUi";
+            this.Text = "Lunch Bill Calculator";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
