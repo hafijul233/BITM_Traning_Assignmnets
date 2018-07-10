@@ -25,7 +25,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "12RegistrationSearchBooth",
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "13LabTestLunchBillCalculator", "13LabTestLunchBillCalculator\13LabTestLunchBillCalculator.csproj", "{B4C01EF3-EA8C-4F44-83DD-00ABE80D790F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "14AllTypeObjects", "AllTypeObjects\14AllTypeObjects.csproj", "{764E9D14-E0EE-4CEF-A9BC-43993E6CFFD6}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "14AllTypeObjects", "14AllTypeObjects\14AllTypeObjects.csproj", "{764E9D14-E0EE-4CEF-A9BC-43993E6CFFD6}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
