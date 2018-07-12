@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace AllTypeObjects
+namespace _02BasicCalculator
 {
     static class Program
     {
@@ -16,7 +16,7 @@ namespace AllTypeObjects
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new StudentInfoUi());
+            Application.Run(new CalculatorFormUi());
         }
     }
 }

@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{764E9D14-E0EE-4CEF-A9BC-43993E6CFFD6}</ProjectGuid>
+    <ProjectGuid>{E3E8C601-1637-4C04-BD2D-922A9D7E7D91}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>AllTypeObjects</RootNamespace>
-    <AssemblyName>AllTypeObjects</AssemblyName>
+    <RootNamespace>_01BankAccountQuery</RootNamespace>
+    <AssemblyName>01BankAccountQuery</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -44,15 +44,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Classes\Student.cs" />
-    <Compile Include="StudentInfoUi.cs">
+    <Compile Include="BankAccountQueryUi.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="StudentInfoUi.Designer.cs">
-      <DependentUpon>StudentInfoUi.cs</DependentUpon>
+    <Compile Include="BankAccountQueryUi.Designer.cs">
+      <DependentUpon>BankAccountQueryUi.cs</DependentUpon>
     </Compile>
+    <Compile Include="Class\AccountInfo.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="BankAccountQueryUi.resx">
+      <DependentUpon>BankAccountQueryUi.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -62,9 +65,6 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="StudentInfoUi.resx">
-      <DependentUpon>StudentInfoUi.cs</DependentUpon>
-    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

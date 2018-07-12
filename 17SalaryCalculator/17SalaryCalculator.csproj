@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{764E9D14-E0EE-4CEF-A9BC-43993E6CFFD6}</ProjectGuid>
+    <ProjectGuid>{07BC34F6-8E11-4068-ABEB-7794F783479E}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>AllTypeObjects</RootNamespace>
-    <AssemblyName>AllTypeObjects</AssemblyName>
+    <RootNamespace>_03SalaryCalculator</RootNamespace>
+    <AssemblyName>03SalaryCalculator</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -44,12 +44,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Classes\Student.cs" />
-    <Compile Include="StudentInfoUi.cs">
+    <Compile Include="Class\EmployeeSalary.cs" />
+    <Compile Include="SalaryCalculatorUi.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="StudentInfoUi.Designer.cs">
-      <DependentUpon>StudentInfoUi.cs</DependentUpon>
+    <Compile Include="SalaryCalculatorUi.Designer.cs">
+      <DependentUpon>SalaryCalculatorUi.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -62,8 +62,8 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="StudentInfoUi.resx">
-      <DependentUpon>StudentInfoUi.cs</DependentUpon>
+    <EmbeddedResource Include="SalaryCalculatorUi.resx">
+      <DependentUpon>SalaryCalculatorUi.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
