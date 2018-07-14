@@ -35,6 +35,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "11TrainingRegistrationApp",
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "18GPAResultCalculator", "GPAResultCalculator\18GPAResultCalculator.csproj", "{EB7B9772-DE55-4734-93F8-6687E72218D3}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "19Vehicle Control Panel", "Vehicle Control Panel\19Vehicle Control Panel.csproj", "{801D63A2-2126-441A-B7BE-5FB914EFCF99}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -105,6 +107,10 @@ Global
 		{EB7B9772-DE55-4734-93F8-6687E72218D3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EB7B9772-DE55-4734-93F8-6687E72218D3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EB7B9772-DE55-4734-93F8-6687E72218D3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{801D63A2-2126-441A-B7BE-5FB914EFCF99}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{801D63A2-2126-441A-B7BE-5FB914EFCF99}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{801D63A2-2126-441A-B7BE-5FB914EFCF99}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{801D63A2-2126-441A-B7BE-5FB914EFCF99}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
