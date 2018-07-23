@@ -37,6 +37,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "18GPAResultCalculator", "GP
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "19Vehicle Control Panel", "Vehicle Control Panel\19Vehicle Control Panel.csproj", "{801D63A2-2126-441A-B7BE-5FB914EFCF99}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StudentRegistrationBooth", "StudentRegistrationBooth\StudentRegistrationBooth.csproj", "{ABD45C33-CB14-42FE-871D-4F77788DA4AF}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -111,6 +113,10 @@ Global
 		{801D63A2-2126-441A-B7BE-5FB914EFCF99}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{801D63A2-2126-441A-B7BE-5FB914EFCF99}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{801D63A2-2126-441A-B7BE-5FB914EFCF99}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ABD45C33-CB14-42FE-871D-4F77788DA4AF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ABD45C33-CB14-42FE-871D-4F77788DA4AF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ABD45C33-CB14-42FE-871D-4F77788DA4AF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ABD45C33-CB14-42FE-871D-4F77788DA4AF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
