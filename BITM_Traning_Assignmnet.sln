@@ -37,7 +37,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "18GPAResultCalculator", "GP
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "19Vehicle Control Panel", "Vehicle Control Panel\19Vehicle Control Panel.csproj", "{801D63A2-2126-441A-B7BE-5FB914EFCF99}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StudentRegistrationBooth", "StudentRegistrationBooth\StudentRegistrationBooth.csproj", "{ABD45C33-CB14-42FE-871D-4F77788DA4AF}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "20CustomerRegistrationBooth", "StudentRegistrationBooth\20CustomerRegistrationBooth.csproj", "{ABD45C33-CB14-42FE-871D-4F77788DA4AF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
