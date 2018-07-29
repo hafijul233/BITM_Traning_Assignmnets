@@ -87,6 +87,7 @@ namespace StudentRegistrationBooth
 
             connection.Open();
 
+
             result = command.ExecuteNonQuery();
 
             connection.Close();
