@@ -8,7 +8,7 @@ namespace StudentRegistrationBooth.Models
 {
     class Customer
     {
-        public string _code;
+        public string _code { get; set; }
         public string _name;
         public string _contactNo;
         public string _birthDate;
