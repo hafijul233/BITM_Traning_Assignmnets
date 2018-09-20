@@ -16,6 +16,9 @@ namespace CustomerManager
     {
         private List<Customer> CustomerList = new List<Customer>();
         private SqlConnection _connection;
+        private List<string> SubdistrictList = new List<string>();
+        private List<string> DistrictList = new List<string>();
+        private int resultIndex = -1;
 
         public CustomerRegistrationUi()
         {
@@ -28,7 +31,7 @@ namespace CustomerManager
 
             //Add All SubDistricts
 
-            string query = "SELECT SubDistrict FROM SubDistrictInfo";
+            string query = "SELECT Subdistrict FROM SubDistrictInfo";
 
                 SqlCommand command = new SqlCommand(query, _connection);
 
@@ -36,11 +39,12 @@ namespace CustomerManager
 
             SqlDataReader dataReader = command.ExecuteReader();
 
-            if (dataReader.Read())
+            if (dataReader.HasRows)
             {
-               foreach(dynamic subdistric in dataReader)
+                while (dataReader.Read())
                 {
-                    MessageBox.Show(subdistric.Name[""])
+                    string subdistrict = dataReader.GetString(dataReader.GetOrdinal("Subdistrict"));
+                    SubdistrictList.Add(subdistrict);
                 }
             }
 
@@ -55,15 +59,25 @@ namespace CustomerManager
             _connection.Open();
 
             dataReader = command.ExecuteReader();
-            if (dataReader.Read())
+            if (dataReader.HasRows)
             {
-                foreach (var name in dataReader)
+                while (dataReader.Read())
                 {
-                    string districtName = name.ToString();
-                    DistrictComboBox.Items.Add(districtName);
+                    string district = dataReader.GetString(dataReader.GetOrdinal("District"));
+                    DistrictList.Add(district);
                 }
             }
-            _connection.Close();*/
+            _connection.Close();
+
+            foreach (var subdisk in SubdistrictList)
+            {
+                SubDistrictComboBox.Items.Add(subdisk.ToString());
+            }
+
+            foreach (var distisk in DistrictList)
+            {
+                DistrictComboBox.Items.Add(distisk.ToString());
+            }
         }
 
         private void SaveButton_Click(object sender, EventArgs e)
@@ -86,6 +100,8 @@ namespace CustomerManager
                 if (errorReturn != 0)
                 {
                     MessageBox.Show("New Customer Registered!");
+
+                    CustomerList.Add(customer);
 
                     CodeTextBox.Text = String.Empty;
                     NameTextBox.Text = String.Empty;
@@ -123,15 +139,17 @@ namespace CustomerManager
         
         private int CustomerEntry(Customer newcustomer)
         {
-            string query = @"INSERT INTO CustomerInfo(CustomerCode, CustomerName, ContactNumber, BirthDate, SubDistrict, District)"
-                          + "VALUES ('" + newcustomer.Code + "', '" + newcustomer.Name + "', '" + newcustomer.ContactNo + "', '" + newcustomer.Dateofbirth + "', '" + newcustomer.Email + "')";
+            string query = @"INSERT INTO CustomerInfo(CustomerCode, CustomerName, ContactNumber, BirthDate, EmailAddress, SubDistrict, District)"
+                          + "VALUES ('" + newcustomer.Code + "', '" + newcustomer.Name + "', '" + newcustomer.ContactNo + "', '" +
+                          newcustomer.Dateofbirth + "', '" + newcustomer.Email + "', '" + newcustomer.Subdistrict + "', '" +
+                          newcustomer.District + "')";
 
             //4 SQL Command
 
-            SqlCommand command = new SqlCommand(query, con);
+            SqlCommand command = new SqlCommand(query, _connection);
 
             //5 Connection Open
-            con.Open();
+            _connection.Open();
 
             //6 Execute
 
@@ -141,21 +159,25 @@ namespace CustomerManager
             //{
 
             //}
+            int isRowAffected;
 
-            bool isRowAffected = command.ExecuteNonQuery() > 0;
+            if (command.ExecuteNonQuery() > 0)
+
+                isRowAffected = 1;
+            else
+                isRowAffected = 0;
 
 
             //7 Connection Close
-            con.Close();
+            _connection.Close();
 
             return isRowAffected;
-            return 0;
         }
 
         private void SearchButton_Click(object sender, EventArgs e)
         {
             string searchCode = SearchTextBox.Text;
-            int resultIndex = -1;
+            
             for(int i=0; i < CustomerList.Count; i++)
             {
                 Customer Member = CustomerList[i];
@@ -191,16 +213,15 @@ namespace CustomerManager
             SaveButton.Text = "Update";
             SaveButton.BackColor = Color.Green;
 
-            /*Customer customer = CustomerList[0
-                ];
+            Customer customer = CustomerList[resultIndex];
 
             CodeTextBox.Text = customer.Code;
             NameTextBox.Text = customer.Name;
             ContactNoTextBox.Text = customer.ContactNo;
             BirthateTimePicker.Text = customer.Dateofbirth;
             EmailTextBox.Text = customer.Email;
-            SubDistrictTextBox.Text = customer.Subdistrict;
-            DistrictTextBox.Text = customer.District;*/
+            SubDistrictComboBox.Text = customer.Subdistrict;
+            DistrictComboBox.Text = customer.District;
         }
 
         
