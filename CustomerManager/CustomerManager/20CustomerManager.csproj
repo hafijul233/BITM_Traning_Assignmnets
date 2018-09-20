@@ -50,6 +50,7 @@
     <Compile Include="CustomerRegistrationUi.Designer.cs">
       <DependentUpon>CustomerRegistrationUi.cs</DependentUpon>
     </Compile>
+    <Compile Include="Models\Customer.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="CustomerRegistrationUi.resx">
